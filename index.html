@@ -15,7 +15,7 @@ a {
     color: #333;
     text-decoration: none;
 }
-
+m
 a:hover {
     text-decoration: underline;
 }
@@ -29,6 +29,42 @@ div[id="d"]{
   border-radius:7px;
   margin-top:20px;
   }
+  @keyframes abc{
+    0%{
+      max-width:10vw;
+      }
+    100%{
+      max-width:70vw;
+      }
+    }
+  div[id="c"]{
+    animation-duration: 3s;
+    animation-name: abc;
+    }
+  @keyframes abcd{
+    0%{
+      max-width:5vw;
+      }
+    100%{
+      max-width:20vw;
+      }
+    }
+  div[id="aa"]{
+    animation-duration:3s;
+    animation-name:abcd;
+    }
+  @keyframes abcde{
+    0%{
+      max-width:1vw;
+      }
+    100%{
+      max-width:10vw;
+      }
+    }
+  div[id="ab"]{
+    animation-duration:3s;
+    animation-name:abcde;
+    }
   </style>
   <script>
   window.confirm("欢迎来到UPLCC的博客");
@@ -42,13 +78,13 @@ div[id="d"]{
  <div id="c" style="background-color:#ff6b00;border-radius:15px;max-width:70vw"><h5 style="color:white">70%</h5>
  </div>
   <p>CSS</p>
- <div id="c" style="background-color:#e0ff7d;border-radius:15px;max-width:20vw"><h5 style="color:white">20%</h5>
+ <div id="aa" style="background-color:#e0ff7d;border-radius:15px;max-width:20vw"><h5 style="color:white">20%</h5>
  </div>
   <p>JAVASCRIPT</p>
- <div id="c" style="background-color:#92f9ff;border-radius:15px;max-width:10vw"><h5 style="color:white">10%</h5>
+ <div id="ab" style="background-color:#92f9ff;border-radius:15px;max-width:10vw"><h5 style="color:white">10%</h5>
  </ol><br></div>
  </ol>
  </div>
  <div id="d"><br><h3><center>文章</center></h3><p><center>暂无发布文章</center></p><br></div>
   </body>
-  </html>
+										       </html>
