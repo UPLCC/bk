@@ -82,14 +82,63 @@ div[id="d"]{
  </ol><br></div>
  </ol>
  </div>
- <div id="d"><br><h3><center>文章</center></h3><p><div id="mnb"><span id="qwmn">文章1</span><span id="qgb" onclick="gb1()">&times</span><center><br><p>在信息技术课中，我旁边的同学练习打字时震惊到我：打字速度只有十几二十个字，在金山打字王中打"Who am I"这篇文章打了一节课（40分钟）都没打完，可见他打字的速度！</p></center></div><center><button onclick="mnbv()" id="qm"><p id="qmn">1.信息技术课我旁边的同学打字慢<p></button></center></p><br></div>
+ <div id="d">
+ <br>
+ <h3><center>文章</center></h3><p>
+ <div id="mnb">
+ <span id="qwmn">文章1</span>
+ <span id="qgb" onclick="gb1()">&times</span>
+ <center>
+ <br> <p>在信息技术课中，我旁边的同学练习打字时震惊到我：打字速度只有十几二十个字，在金山打字王中打"Who am I"这篇文章打了一节课（40分钟）都没打完，可见他打字的速度！</p>
+ </center>
+ </div>
+ <center>
+ <button onclick="mnbv()" id="qm"><p id="qmn">1.信息技术课我旁边的同学打字慢<p></button>
+ </center>
+ </p>
+ <br>
+ <div id="B">
+  <span id="C">文章2</span>
+ <span id="qgb2" onclick="gb2()">&times</span>
+ <br>
+ <p>
+ &nbsp&nbsp&nbsp&nbsp&nbspI have a good friend.He is thirteen years old.His hair is black.He has a big nose,big eyes.He is student.If you ask him if he's handsome, I'll answer, "No, I'm handsome." Do you have good friends?
+ </p>
+ </div>
+ <center>
+ <button id="A" onclick="dk1()">2.My Good Friend</button>
+ </center>
+ <br>
+ </div>
   </body>
   <style>
+  @keyframes A{
+    0%{
+    max-height:0px;
+    color:white;
+    }
+  100%{
+    max-height:160px;
+    color:black;
+    }
+    }
+  @keyframes B{
+    0%{
+    max-height:0px;
+    color:white;
+    }
+  100%{
+    max-height:300px;
+    color:black;
+    }
+    }
   div[id="mnb"]{
     display:none;
     box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
   border-radius:7px;
   margin-top:3px;
+  animation-name:A;
+  animation-duration:0.7s;
     }
   button[id="qm"]{
     border:0px solid white;
@@ -102,6 +151,22 @@ div[id="d"]{
   span[id="qgb"]{
     float:right;
     }
+  button[id="A"]{
+    border:0px solid white;
+    background-color:white;
+    margin-top:5px;
+    }
+  div[id="B"]{
+    display:none;
+    box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+  border-radius:7px;
+  margin-top:3px;
+  animation-name:B;
+  animation-duration:0.7s;
+    }
+  span[id="qgb2"]{
+    float:right;
+    }
   </style>
   <script>
   //文章显示和关闭专用标签
@@ -112,6 +177,14 @@ div[id="d"]{
 function gb1(){
 mnb.style.display = "none";
 document.getElementById("qmn").innerHTML = "1.信息技术课我旁边的同学打字慢";
+}
+function dk1(){
+document.getElementById("A").innerHTML = "";
+  B.style.display = "block";
+}
+function gb2(){
+B.style.display = "none";
+document.getElementById("A").innerHTML = "2.My Good Friend";
 }
   </script>
 	</html>
