@@ -87,10 +87,9 @@ div[id="d"]{
  <h3><center>文章</center></h3><p>
  <div id="mnb">
  <span id="qwmn">文章1</span>
+ <span id="G" onclick="if(id=='G'){zxh2()}else{zdh2()}">-</span>
  <span id="qgb" onclick="gb1()">&times</span>
- <center>
- <br> <p>在信息技术课中，我旁边的同学练习打字时震惊到我：打字速度只有十几二十个字，在金山打字王中打"Who am I"这篇文章打了一节课（40分钟）都没打完，可见他打字的速度！</p>
- </center>
+ <p id="H">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在信息技术课中，我旁边的同学练习打字时震惊到我：打字速度只有十几二十个字，在金山打字王中打"Who am I"这篇文章打了一节课（40分钟）都没打完，可见他打字的速度！</p>
  </div>
  <center>
  <button onclick="mnbv()" id="qm"><p id="qmn">1.信息技术课我旁边的同学打字慢<p></button>
@@ -99,9 +98,10 @@ div[id="d"]{
  <br>
  <div id="B">
   <span id="C">文章2</span>
+  <span id="D" onclick="if(id=='D'){zxh1()}else{zdh1()}">-</span>
  <span id="qgb2" onclick="gb2()">&times</span>
  <br>
- <p>
+ <p id="E">
  &nbsp&nbsp&nbsp&nbsp&nbspI have a good friend.He is thirteen years old.His hair is black.He has a big nose,big eyes.He is student.If you ask him if he's handsome, I'll answer, "No, I'm handsome." Do you have good friends?
  </p>
  </div>
@@ -167,24 +167,60 @@ div[id="d"]{
   span[id="qgb2"]{
     float:right;
     }
+  span[id="D"]{
+    margin-left:75vw;
+    }
+  span[id="F"]{
+    margin-left:75vw;
+    }
+    span[id="G"]{
+    margin-left:75vw;
+    }
+  span[id="I"]{
+    margin-left:75vw;
+    }
   </style>
   <script>
-  //文章显示和关闭专用标签
+  //文章显示关闭最小化专用标签
   function mnbv(){
   document.getElementById("qmn").innerHTML = "";
   mnb.style.display = "block";
+  qm.style.display="none";
   }
 function gb1(){
 mnb.style.display = "none";
 document.getElementById("qmn").innerHTML = "1.信息技术课我旁边的同学打字慢";
+qm.style.display="block";
 }
 function dk1(){
 document.getElementById("A").innerHTML = "";
   B.style.display = "block";
+  A.style.display="none";
 }
 function gb2(){
 B.style.display = "none";
 document.getElementById("A").innerHTML = "2.My Good Friend";
+A.style.display="block";
+}
+function zxh1(){
+document.getElementById("D").innerHTML="□";
+E.style.display = "none";
+document.getElementById("D").id="F";
+}
+function zdh1(){
+document.getElementById("F").innerHTML="-";
+E.style.display = "block";
+document.getElementById("F").id="D";
+}
+function zxh2(){
+document.getElementById("G").innerHTML="□";
+H.style.display = "none";
+document.getElementById("G").id="I";
+}
+function zdh2(){
+document.getElementById("I").innerHTML="-";
+H.style.display = "block";
+document.getElementById("I").id="G";
 }
   </script>
-	</html>
+</html>
