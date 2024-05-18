@@ -18,12 +18,12 @@ a {
 
 div[id="b"]{
   box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
-  border-radius:7px;
+  border-radius:20px;
   margin-top:13px;
   }
 div[id="d"]{
   box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
-  border-radius:7px;
+  border-radius:20px;
   margin-top:20px;
   }
   @keyframes abc{
@@ -68,7 +68,7 @@ div[id="d"]{
   </script>
   <body>	
 	<h1><center><i>UPLCC</i>的博客</center></h1>
- <div id="a"><center>个性签名:热爱HTML<br>拥有网站:<br><a href="https://uplcc.github.io/jsq/">https://uplcc.github.io/jsq/</a><br><a href="https://uplcc.github.io/jjsq/">https://uplcc.github.io/jjsq/</a><br><a href="https://uplcc.github.io/yx/">https://uplcc.github.io/yx/</a>等</center></div>
+ <div id="a"><center>UPLCC<br>拥有网站:<br><a href="https://uplcc.github.io/jsq/">https://uplcc.github.io/jsq/</a><br><a href="https://uplcc.github.io/jjsq/">https://uplcc.github.io/jjsq/</a><br><a href="https://uplcc.github.io/yx/">https://uplcc.github.io/yx/</a>等</center></div>
  <div id="b">
  <ol>
  <p>HTML</p>
@@ -85,6 +85,10 @@ div[id="d"]{
  <div id="d">
  <br>
  <h3><center>文章</center></h3><p>
+ <div id="mma" class="mma">
+<center><br><h3>提示</h3>
+<p>抱歉，因特殊原因本文章需输入密码后查看!</p><input type="text" id="mmainput" class="mmainput" placeholder="PASSWORD"/><button id="mmabut" class="mmabut" onclick="mmayz();">确定</button></center>
+</div>
  <div id="mnb">
  <span id="qwmn">文章1</span>
  <span id="G" onclick="if(id=='G'){zxh2()}else{zdh2()}">-</span>
@@ -135,7 +139,7 @@ div[id="d"]{
   div[id="mnb"]{
     display:none;
     box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
-  border-radius:7px;
+  border-radius:10px;
   margin-top:3px;
   animation-name:A;
   animation-duration:0.7s;
@@ -159,7 +163,7 @@ div[id="d"]{
   div[id="B"]{
     display:none;
     box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
-  border-radius:7px;
+  border-radius:10px;
   margin-top:3px;
   animation-name:B;
   animation-duration:0.7s;
@@ -179,13 +183,70 @@ div[id="d"]{
   span[id="I"]{
     margin-left:75vw;
     }
+.mma{
+height:200px;
+width:300px;
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+border-radius:30px;
+position:absolute;
+left:0;
+right:0;
+bottom:20%;
+margin:0 auto;
+background-color:white;
+display:none;
+animation-name:mmazq;
+animation-duration:0.7s;
+}
+.mmainput{
+border-left:0px;
+border-right:0px;
+border-top:0px;
+text-align:center;
+border-bottom:2px solid #d6feff;
+}
+.mmabut{
+background-color:white;
+border:0px solid white;
+color:#d6feff;
+}
+@keyframes mmazq{
+0%{
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0);
+color:white;
+}
+100%{
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+color:black;
+}
+}
   </style>
   <script>
+mmadyzsz = 0;
+function mmayz(){
+if(mmainput.value == "uplcc123456"){
+mma.style.display="none";
+mmadyzsz = 1;
+mnb.style.display="block";
+qm.style.display="none";
+}else{
+mmainput.style.color="#ff481d";
+mmainput.style.borderBottom="2px solid #ff481d";
+setTimeout(function (){
+mmainput.style.color="black";
+mmainput.style.borderBottom="2px solid #d6feff";
+},500);
+}
+}
   //文章显示关闭最小化专用标签
   function mnbv(){
+if(mmadyzsz == 0){
+mma.style.display="block";
+}else{
   document.getElementById("qmn").innerHTML = "";
   mnb.style.display = "block";
   qm.style.display="none";
+}
   }
 function gb1(){
 mnb.style.display = "none";
